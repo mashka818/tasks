@@ -1,0 +1,308 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+  color: #343a40;
+}
+
+code {
+  font-family: 'Fira Code', 'Source Code Pro', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --primary: #515a67;
+  --primary-dark: #3d4550;
+  --primary-light: #6c757d;
+  --accent: #ff7d32;
+  --accent-light: #ff9d5c;
+  --success: #4caf50;
+  --warning: #ff9800;
+  --danger: #f44336;
+  --info: #2196f3;
+  --light: #f5f5f5;
+  --dark: #343a40;
+  --white: #ffffff;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-container {
+  padding: 1.5rem 1rem;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.content-wrapper {
+  width: 100%;
+  padding: 0;
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  background-color: var(--white);
+}
+
+.project-card {
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.task-list-item {
+  border-left: 4px solid #dee2e6;
+  transition: all 0.3s ease;
+  margin-bottom: 8px;
+  border-radius: 0 4px 4px 0;
+}
+
+.task-list-item:hover {
+  transform: translateX(3px);
+  box-shadow: var(--shadow);
+}
+
+.task-list-item.high {
+  border-left-color: var(--danger);
+}
+
+.task-list-item.medium {
+  border-left-color: var(--warning);
+}
+
+.task-list-item.low {
+  border-left-color: var(--success);
+}
+
+/* Переопределение цветов Bootstrap */
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+  color: white;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-primary:active,
+.btn-outline-primary:focus,
+.btn-outline-primary:active:focus {
+  color: white !important;
+  background-color: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
+  box-shadow: none !important;
+}
+
+.card {
+  border: none;
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-header {
+  background-color: var(--primary);
+  color: white;
+  border-bottom: none;
+  padding: 0.75rem 1.25rem;
+}
+
+.badge.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.badge.bg-success {
+  background-color: var(--success) !important;
+}
+
+.badge.bg-warning {
+  background-color: var(--warning) !important;
+  color: var(--dark);
+}
+
+.badge.bg-danger {
+  background-color: var(--danger) !important;
+}
+
+.badge.bg-accent {
+  background-color: var(--accent) !important;
+  color: white;
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-light);
+  border-color: var(--accent-light);
+  color: white;
+}
+
+/* Стили для инфографики */
+.stats-card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border-top: 3px solid var(--primary);
+}
+
+.stats-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.stats-card.accent {
+  border-top-color: var(--accent);
+}
+
+.stats-card.success {
+  border-top-color: var(--success);
+}
+
+.stats-card.warning {
+  border-top-color: var(--warning);
+}
+
+.stats-card.danger {
+  border-top-color: var(--danger);
+}
+
+.stats-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.stats-label {
+  color: var(--primary);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.progress-thin {
+  height: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+/* Убираем синие анимации при нажатии на кнопки и элементы */
+button:focus, 
+.btn:focus,
+.btn:active,
+.btn:active:focus,
+a:focus,
+a:active,
+a:active:focus,
+.nav-link:focus,
+.nav-link:active,
+.form-control:focus,
+input:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.btn-accent:focus, 
+.btn-accent:active, 
+.btn-accent:active:focus {
+  background-color: var(--accent-light) !important;
+  border-color: var(--accent-light) !important;
+}
+
+.btn-primary:focus, 
+.btn-primary:active, 
+.btn-primary:active:focus {
+  background-color: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Фиксируем отображение ссылок на темном фоне */
+.card-header a, 
+.bg-primary a {
+  color: white;
+  text-decoration: none;
+}
+
+.card-header a:hover,
+.bg-primary a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Переопределение стилей Alert */
+.alert-info {
+  background-color: rgba(255, 125, 50, 0.1) !important;
+  color: var(--accent) !important;
+  border-color: rgba(255, 125, 50, 0.5) !important;
+}
+
+.alert-warning {
+  background-color: rgba(255, 125, 50, 0.2) !important;
+  color: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+.alert-info strong, .alert-warning strong {
+  color: var(--accent) !important;
+}
+
+/* Стили для отображения комментариев в задачах */
+.notes-pre {
+  font-family: inherit;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background-color: #f8f9fa;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Image viewer styling */
+.img-viewer {
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+/* Add a subtle shadow to the image in the viewer */
+.modal-body .img-viewer {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+} 
